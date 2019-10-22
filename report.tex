@@ -1,0 +1,104 @@
+\documentclass[aps,superscriptaddress,floatfix,nofootinbib,showpacs,amsmath,amssymb,altaffilletter,floatfix,onecolumn]{revtex4-1}
+
+\input{def.tex}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{siunitx}
+%\usepackage{siunitxext}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{wrapfig}
+\usepackage[title]{appendix}
+\usepackage{float}
+
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\rfoot{\thepage}
+\pagestyle{fancy}
+\renewcommand{\thepage}{}
+\renewcommand{\thepage}{\arabic{page}}
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+\parskip = 6pt %changes spacing between paragraphs
+%\nolinenumbers
+\makeatletter
+\def\p@subsection{}
+\makeatother
+\makeatletter
+\def\p@subsubsection{}
+\makeatother
+
+\begin{document}
+\title{SORA 3: Stratospheric Organism and Radiation Analyzer}
+
+\begin{abstract}
+\begin{center}
+{\bf Abstract}
+\end{center}
+\frenchspacing
+%from our provisional application:
+
+
+The mission had three main scientific objectives. 
+First, it built upon a further developed and novel system for isolating surrounding air. 
+Second, an on-board MiniPIX USB particle detector analyzed real-time exposure to cosmic radiation and attempted to measure neutrons with a coupled, boron loaded scintillator.
+Finally, a matured version of a flight computer monitored all the systems, downlinked real-time data, and controlled all uplink commands.
+The payload design took advantage of additive manufacturing and hobby electronics in its construction to provide an accessible basis for future missions and explore the bounds of the technology available. 
+
+\newpage %Breaks page for the Table of Contents.
+\end{abstract}
+\input{authors.tex}
+\setlength{\parindent}{1em}
+\setdefaultleftmargin{1em}{1em}{}{}{}{}
+%---
+\setcounter{page}{0}\thispagestyle{empty}
+%---
+\maketitle
+\onecolumngrid
+\setcounter{tocdepth}{2}
+\setcounter{page}{0}\thispagestyle{empty}
+\tableofcontents
+\setcounter{page}{0}\thispagestyle{empty}
+\newpage
+\onecolumngrid
+
+%Section: Introduction
+\subimport{sections/}{Introduction.tex}
+\subimport{astrobio/}{IntroAstro.tex}
+\subimport{radiation/}{IntroRad.tex}
+
+%Section: SORA Hardware Description
+\subimport{sections/}{Hardware.tex}
+\subimport{astrobio/}{DesignAstro.tex}
+\subimport{radiation/}{DesignRad.tex}
+
+%Section: Methods
+\subimport{sections/}{Methods.tex}
+\subimport{astrobio/}{MethodsAstro.tex}
+\subimport{radiation/}{MethodsRad.tex}
+
+%Results and Analysis
+\subimport{sections/}{Results.tex} 
+\subimport{astrobio/}{ResultsAstro.tex} 
+\subimport{radiation/}{ResultsRad.tex} 
+
+%Discussion
+\subimport{sections/}{Discussion.tex}
+\subimport{astrobio/}{DiscussionAstro.tex}
+\subimport{radiation/}{DiscussionRad.tex}
+
+%Conclusion
+\subimport{sections/}{Conclusion.tex} 
+\newpage
+
+%Appendix
+\subimport{sections/}{Appendix.tex}
+\newpage
+
+%References
+\subimport{bib/}{bib.tex}%Bibliography file
+
+\clearpage
+\bibliographystyle{SORA}
+\end{document}
