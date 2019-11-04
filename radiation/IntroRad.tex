@@ -1,6 +1,29 @@
 \subsection{Radiation Background}
 \label{sec:Radiation-Background}
 
-This is the radiation background.
+Primary comsic rays is an umbrella term that describes a group of high-energy, charged particles.
+These particles are typically partially or fully ionized atoms with the major constituents being hydrogen and helium nuclei respectively making up about 89\% and 10\% of the spectrum \cite{Lemoine} \cite{CERN-Cosmic-Rays}.
+When a primary particle collides with a molecule in the atmosphere, secondary particles are produced which then collide with molecules causing a cascade of particles known as an air shower \cite{Frank-Schroder}.
+The products of air showers are electrons, muons, neutrinos, electromagnetic waves, and various other particles which can be detected on the Earth's surface.
+By measuring these particles and gathering information about the air shower, the type, energy, and direction of the primary particle can be extrapolated.
+The initial energy of the primary particle determines the penetration depth of the air shower, however, most air showers have a maximum secondary particle density at an altitude within the range of \SIrange{15}{20}{\kilo\meter} known as the Regener-Pfotzer Maximum \cite{Regener-Pfotzer} \cite{Secondary-Intensity-Balloons}.
+%In extreme cases when the primary particle is in the ultra-high energy range, the shower maximum can be as low as \SI{3}{\kilo\meter} above the Earth's surface \cite{Frank-Schroder}.
+The altitude and strength of this maximum is dependent on several factors such as the solar cycles, time of year, and latitude and longitude.
+The cosmic ray flux has contributions from the Sun (solar cosmic rays), the galaxy, and outside the galaxy \cite{Frank-Schroder}.
+Cosmic rays which have galactic and extra-galactic origins are known as galactic cosmic rays (GCRs) and are responsible for the majority of the observed particle flux in the atmosphere.
+Interestingly, the GCR flux modulates inversely with the solar cycle in events that are known as a Forbush Decrease \cite{Secondary-Intensity-Balloons} \cite{Hathaway-Solar-Cycle} \cite{Forbush-Decrease}.
+NASA reports that astronauts aboard the International Space Station (ISS) receive about double the radiation dose during a solar minimum than they do during a solar maximum \cite{NASA-Radiation-Book}.
+Furthermore, recent behavior exhibited by the Sun has resulted in the highest observed GCR flux since the dawn of the space age \cite{Schwadron}, causing concern regarding the safety of humans in space.
 
+Naturally, this unexpected behavior from the Sun calls for careful monitoring of humans in space and the skies.
+Commercial airplanes fly in a portion of the atmosphere in which the radiation flux is higher, resulting in a radiation exposure for frequent fliers and airline crew. 
+This is a huge motivation for the radiation monitoring portion of our experiment with which we aim to develop a nonintrusive, inexpensive radiation dosimeter.
+SORA uses Medipix-based \cite{Medipix} devices to record data.
+The SORA 3 experiment used two such devices: one was the MiniPIX \cite{MiniPIX-ADVACAM}, and the other was a FITPix \cite{FITPix}.
+These devices have a USB interface and are capable of detecting charged particles by use of a Timepix sensor \cite{Timepix}.
+The Timepix sensor is made up of an array of 256 by 256 pixels with a total surface area of \SI{198.25}{\milli\meter\squared}.
+Each pixel in the array is its own sensor with its own set of readout electronics.
+The details of the chip construction is given by Jakubek in Ref. \cite{Jakubek-Pixel-Detectors}.
 
+%While not investigated in our experiment, it is worthwhile to mention the relevance of neutrons when considering radiation dose.
+%<<FINISH THIS>>
