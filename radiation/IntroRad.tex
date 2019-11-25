@@ -16,14 +16,21 @@ NASA reports that astronauts aboard the International Space Station (ISS) receiv
 Furthermore, recent behavior exhibited by the Sun has resulted in the highest observed GCR flux since the dawn of the space age \cite{Schwadron}, causing concern regarding the safety of humans in space.
 
 Naturally, this unexpected behavior from the Sun calls for careful monitoring of humans in space and the skies.
-Commercial airplanes fly in a portion of the atmosphere in which the radiation flux is higher, resulting in a radiation exposure for frequent fliers and airline crew. 
+Commercial airplanes fly in a portion of the atmosphere in which the radiation flux is higher, resulting in increased radiation exposure for frequent fliers and airline crew compared to those who fly at most a couple times a year. 
 This is a huge motivation for the radiation monitoring portion of our experiment with which we aim to develop a nonintrusive, inexpensive radiation dosimeter.
 SORA uses Medipix-based \cite{Medipix} devices to record data.
-The SORA 3 experiment used two such devices: one was the MiniPIX \cite{MiniPIX-ADVACAM}, and the other was a FITPix \cite{FITPix}.
+The SORA 3 experiment used two such devices: one is the MiniPIX \cite{MiniPIX-ADVACAM}, and the other is a FITPix \cite{FITPix}.
 These devices have a USB interface and are capable of detecting charged particles by use of a Timepix sensor \cite{Timepix}.
 The Timepix sensor is made up of an array of 256 by 256 pixels with a total surface area of \SI{198.25}{\milli\meter\squared}.
 Each pixel in the array is its own sensor with its own set of readout electronics.
 The details of the chip construction is given by Jakubek in Ref. \cite{Jakubek-Pixel-Detectors}.
+
+The previous two SORA experiments possessed solely the MiniPIX sensor in very similar configurations each time.
+SORA 3 expanded upon this construction with the addition of the FITPix in attempt to accurately model the environment inside the ISS with a small container.
+Ideally, this model would be effective, enabling data collection that is comparable to that data collected aboard the ISS.
+If successful, this would prove the effectiveness of relatively simple constructions to model rather complex or exotic environments.
+Furthermore, this would urge more accurate modelling of environments in which human lives are at great risk.
+Lastly, this would push the boundary of using Timepix devices as radiation dosimeters.
 
 %While not investigated in our experiment, it is worthwhile to mention the relevance of neutrons when considering radiation dose.
 %<<FINISH THIS>>
