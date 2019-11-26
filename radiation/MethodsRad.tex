@@ -24,6 +24,43 @@ A separate file contains the metadata for each data frame, and contained within 
 
 % Detail the analysis techniques used to determine the morphology and the dose (see 2018 report)
 
+%To analyze the Timepix output, a couple of parameters regarding the sensor itself are required.
+Using the techniques detailed by Jakubek et. al. \cite{Jakubek-Analysis}, the radiation dose deposited in the sensor by a particle can be calculated using the following equation
+\begin{equation*}
+  D_{Si} = \dfrac{E}{M_d},
+\end{equation*}
+where $E$ is the total energy that a particle deposited into the sensor and $M_d$ is the mass of the sensor.
+It is important to note that this dose value is not the same as dose deposited in human flesh, which is referred to as dose equivalent.
+The calculation for dose equivalent requires use of computational simulations to calculate a quality factor \cite{CITE ME} << FINISH THIS: CITE ME AND VERIFY TRUTH OF STATEMENT >>
+%This computation prevents the real-time calculation of dose that was performed in the SORA missions. 
+Calculating the total energy of a particle requires the use of a clustering algorithm.
+The clustering algorithm analyzes the raw matrix output from the Timepix sensor and groups the pixels with non-zero energy into clusters, or tracks.
+The total energy of the cluster, $E$, is the sum of all pixel energies in the cluster.
+
+%This analysis method is relatively simple to understand, but the techniques required to compute the clusters is rather complex.
+Another property of interest from the Timepix data is the linear energy transfer (LET), which provides a standard with which all particle clusters can be examined independent of the particle's incident angle.
+%This is particularly important with Timepix sensors since the particle's zenith angle cannot accurately be determined. 
+To calculate the LET in the silicon sensor, the following relation is used
+\begin{equation*}
+  LET_{Si} = \dfrac{E}{L},
+\end{equation*}
+where $E$ is the same energy value used in the $D_{Si}$ calculation, and $L$ is the length of the track in the detector in three dimensions.
+The clustering algorithm uses a typical flood-fill technique to group touching pixels with non-zero energy.
+A minimum-area bounding box is then constructed around the cluster with a linear least square fit line which intersects the bounding box, and the projected track length $L_p$ is taken to be the length of the linear least square fit line.
+A visual example of the bounding box and the linear least square fit line can be seen seen in Figure \ref{fig:stuart-track-example}.
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=0.75\textwidth]{figures/stuart-track-example.png}
+		\caption{A visual from Ref \cite{stuart-thesis} which shows the minimum-area bounding box (the dotted black box surrounding the particle track) and the linear least square fit line (the solid black line running along the particle track).}
+		\label{fig:stuart-track-example}
+	\end{center}
+\end{figure}
+$L$ can now be calculated using $L_p$ and $T$, the thickness of the sensor with
+\begin{equation*}
+  L = \sqrt{L_p^2 + T^2}.
+\end{equation*}
+Since $T$ is a known property of the sensor, the LET value can then be calculated on a per particle basis.
+While out of the scope of the SORA 3 studies, the LET is a value used in calculating the dose equivalent in human flesh.
 
 \subsection{Organic Solar Cell Methods}
 \label{sec:Solar-Cell-Methods}
