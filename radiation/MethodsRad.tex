@@ -31,7 +31,7 @@ Using the techniques detailed by Jakubek et. al. \cite{Jakubek-Analysis}, the ra
 \end{equation*}
 where $E$ is the total energy that a particle deposited into the sensor and $M_d$ is the mass of the sensor.
 It is important to note that this dose value is not the same as dose deposited in human flesh, which is referred to as dose equivalent.
-The calculation for dose equivalent requires use of computational simulations to calculate a quality factor \cite{CITE ME} << FINISH THIS: CITE ME AND VERIFY TRUTH OF STATEMENT >>
+Conventional calculations for dose equivalent in tissue requires use of Monte Carlo to calculate a conversion factor \cite{Stuart-Thesis} and is outside the SORA missions' scope of study.
 %This computation prevents the real-time calculation of dose that was performed in the SORA missions. 
 Calculating the total energy of a particle requires the use of a clustering algorithm.
 The clustering algorithm analyzes the raw matrix output from the Timepix sensor and groups the pixels with non-zero energy into clusters, or tracks.
@@ -51,7 +51,7 @@ A visual example of the bounding box and the linear least square fit line can be
 \begin{figure}[h!]
 	\begin{center}
 		\includegraphics[width=0.75\textwidth]{figures/stuart-track-example.png}
-		\caption{A visual from Ref \cite{stuart-thesis} which shows the minimum-area bounding box (the dotted black box surrounding the particle track) and the linear least square fit line (the solid black line running along the particle track).}
+		\caption{A visual from Ref. \cite{Stuart-Thesis} which shows the minimum-area bounding box (the dotted black box surrounding the particle track) and the linear least square fit line (the solid black line running along the particle track).}
 		\label{fig:stuart-track-example}
 	\end{center}
 \end{figure}
