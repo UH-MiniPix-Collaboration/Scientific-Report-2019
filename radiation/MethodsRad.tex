@@ -31,7 +31,7 @@ Using the techniques detailed by Jakubek et. al. \cite{Jakubek-Analysis}, the ra
 \end{equation*}
 where $E$ is the total energy that a particle deposited into the sensor and $M_d$ is the mass of the sensor.
 It is important to note that this dose value is not the same as dose deposited in human flesh, which is referred to as dose equivalent.
-Conventional calculations for dose equivalent in tissue requires use of Monte Carlo to calculate a conversion factor \cite{Stuart-Thesis} and is outside the SORA missions' scope of study.
+Conventional calculations for dose equivalent in tissue requires use of Monte Carlo simulations to calculate a conversion factor \cite{Stuart-Thesis} and is outside the SORA missions' scope of study.
 %This computation prevents the real-time calculation of dose that was performed in the SORA missions. 
 Calculating the total energy of a particle requires the use of a clustering algorithm.
 The clustering algorithm analyzes the raw matrix output from the Timepix sensor and groups the pixels with non-zero energy into clusters, or tracks.
@@ -61,6 +61,18 @@ $L$ can now be calculated using $L_p$ and $T$, the thickness of the sensor with
 \end{equation*}
 Since $T$ is a known property of the sensor, the LET value can then be calculated on a per particle basis.
 While out of the scope of the SORA 3 studies, the LET is a value used in calculating the dose equivalent in human flesh.
+
+The primary method of categorizing the particle incident on the detector is by the morphology of the resulting cluster.
+The track seen in the detector data will change its shape depending on the energy and the type of the particle.
+The actual identity of the incident particle cannot be directly measured by the sensor, but an inference can be made by using the energy and shape of the cluster. Ref. \cite{Stuart-Thesis} gives some examples, stating that heavy tracks often correspond to high energy protons and alpha particles, medium blobs can correspond to very slow charged particles, straight tracks can be caused by light minimum ionizing particles (e.g. muon, pion). and light tracks can be caused by electrons and positrons.     
+Figure \ref{fig:stuart-track-types} shows the classifications used in the SORA experiments.
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=0.75\textwidth]{figures/stuart-track-types.pdf}
+		\caption{A visual from Ref. \cite{Stuart-Thesis} showing the categories of tracks. This classification system is the same that is used in the SORA experiments.}
+		\label{fig:stuart-track-types}
+	\end{center}
+\end{figure}
 
 \subsection{Organic Solar Cell Methods}
 \label{sec:Solar-Cell-Methods}

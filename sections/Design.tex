@@ -1,7 +1,30 @@
 \section{SORA 3 Payload Design}
 \label{sec:Design}
 
-This is the design.
+\subsection{Payload Structure}
+One major design goal of the SORA 3 mission was to make the overall layout of the payload more modular such that each subsystem was not dependent on the presence of other subsystems.
+This was a major change from previous missions in which systems and components were not organized leading to massive disorganization across the payload.
+The modular structure not only organized the systems, but it made it such that the now independent systems could function in the absence of other systems, thus leading to continued functionality of the payload in the event of an in situ failure.
 
+The modular organization was accomplished by compartmentalizing each subsystem into its own structure.
+The payload was broken up into four main substructures: the astrobiology system, the two radiation containers, and the electronics box.
+The electronics box served to join all systems together, and the other subsystems could easily be added or removed to the electronics box.
+The electronics box was made from an easy-to-form PVC/acrylic, which has been proven to work well for previous missions as it can withstand the extreme environment of the stratosphere and is easily machinable.
+The construction and materials of the astrobiology box and the radiation containers are discussed in their respective sections.
+
+% Include image of the payload layout
 % Talk about physical construction and layout of the payload
+
+
 % Talk about the hardware (PSU, RPi, etc.)
+\subsection{Hardware and Electronics}
+The SORA 3 payload used a WinSystems PPM-DC-ATX-P power supply unit (PSU).
+This unit has several properties that are very attractive for applications such as this. 
+It has an input range of \SIrange{10}{50}{\volt}, allowing the \SI{30}{\volt} line from HASP to be fed directly to the PSU and be capable to withstand any variation in voltage caused by HASP's depleting batteries.
+This PSU has several \SI{+5}{\volt} outputs as well as a \SI{+12}{volt} output and a \SI{-12}{\volt} output all of which were required for the functionality of our experiments.
+The pins used for the SORA 3 payload are marked in Figure \ref{fig:PSU-Outputs}. << FINISH THIS: add figure >>
+Additionally, this PSU is rated to operate from \SIrange{-40}{85}{\celsius}, which is within the environmental variation of temperatures in the stratosphere.
+More technical details can be found on its datasheet at Ref. \cite{WinSystems-PSU}
+
+A Raspberry Pi 3 Model B (RPi) served as the flight computer for this mission.
+<< FINISH THIS >>
