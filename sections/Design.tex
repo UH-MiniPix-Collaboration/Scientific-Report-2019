@@ -20,11 +20,10 @@ The construction and materials of the astrobiology box and the radiation contain
 \subsection{Hardware and Electronics}
 The SORA 3 payload used a WinSystems PPM-DC-ATX-P power supply unit (PSU).
 This unit has several properties that are very attractive for applications such as this. 
-It has an input range of \SIrange{10}{50}{\volt}, allowing the \SI{30}{\volt} line from HASP to be fed directly to the PSU and be capable to withstand any variation in voltage caused by HASP's depleting batteries.
-This PSU has several \SI{+5}{\volt} outputs as well as a \SI{+12}{volt} output and a \SI{-12}{\volt} output all of which were required for the functionality of our experiments.
+To power the flight computer and hardware we received the 30VDC supply from HASP which we fed to a PPM-DC-ATX-P power supply that supplied our electronics with \SI{+5}{volt}, and our current-to-voltage operational amplifiers with \SI{+12}{volt} and \SI{-12}{volt}.
+It has an input range of \SIrange{10}{50}{\volt}, so the unit is capable of withstanding any variation in voltage caused by HASP's depleting batteries.
 The pins used for the SORA 3 payload are marked in Figure \ref{fig:PSU-Outputs}. << FINISH THIS: add figure >>
 Additionally, this PSU is rated to operate from \SIrange{-40}{85}{\celsius}, which is within the environmental variation of temperatures in the stratosphere.
 More technical details can be found on its datasheet at Ref. \cite{WinSystems-PSU}
 
-A Raspberry Pi 3 Model B (RPi) served as the flight computer for this mission.
-<< FINISH THIS >>
+A Raspberry Pi was chosen as the main component of the flight computer as we needed a platform that was capable of storing an SQL database for the large volume of data we had planned to catalogue from the solar cells. An SQL database was found to be necessary due to the serial down-link limit imposed by HASP. We also opted to utilize an Arduino MEGA in order to control the majority of the sensors such as the thermistors for temperature readings, multiple photodiodes for capturing light intensity at the solar cells, a pressure sensor for monitoring altitude, and the array of current-to-voltage converters for characterizing the solar cells. Additionally, the Arduino MEGA sent control signals to an Arduino Nano, a very small footprint microcontroller, which controlled an actuator and a DC stepper motor that were required to operate the mechanical system to facilitate the Astrobiology experiment. 
