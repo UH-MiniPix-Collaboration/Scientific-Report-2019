@@ -68,7 +68,7 @@ The actual identity of the incident particle cannot be directly measured by the 
 Figure \ref{fig:stuart-track-types} shows the classifications used in the SORA experiments.
 \begin{figure}[h!]
 	\begin{center}
-		\includegraphics[width=0.75\textwidth]{figures/stuart-track-types.pdf}
+		\includegraphics[width=\textwidth]{figures/stuart-track-types.pdf}
 		\caption{A visual from Ref. \cite{Stuart-Thesis} showing the categories of tracks. This classification system is the same that is used in the SORA experiments.}
 		\label{fig:stuart-track-types}
 	\end{center}
@@ -77,4 +77,12 @@ Figure \ref{fig:stuart-track-types} shows the classifications used in the SORA e
 \subsection{Organic Solar Cell Methods}
 \label{sec:Solar-Cell-Methods}
 
-In order to emulate lab results of solar cell characterization as best as possible in a near space environment a current-to-voltage converter was constructed [reference figure]. A digital potentiometer, MPC4131, was used to apply a bias voltage across a solar cell which would produce a current in the micro-Amp range. A combination of two LM2904 operational amplifiers were required to capture both positive and negative current readings which were read as analogue values by the Arduino MEGA.
+In order to emulate lab results of solar cell characterization as best as possible in a near space environment a current-to-voltage converter was constructed [reference figure]. A digital potentiometer, MPC4131, was used to apply a bias voltage across a solar cell which would produce a current in the micro-Amp range. A combination of two LM2904 operational amplifiers were required to capture both positive and negative current readings which were read as analogue values by the Arduino MEGA. The circuit diagram can be seen in Figure \ref{fig:solar-cell-circuit}
+
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=0.75\textwidth]{figures/solar-cell-circuit-diagram.png}
+		\caption{Circuit diagram of the current-reading circuit constructed for the solar cells.}
+		\label{fig:solar-cell-circuit}
+	\end{center}
+\end{figure}
