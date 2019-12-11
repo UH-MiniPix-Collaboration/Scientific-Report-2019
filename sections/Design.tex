@@ -15,10 +15,17 @@ The construction and materials of the astrobiology box and the radiation contain
 % Include image of the payload layout
 % Talk about physical construction and layout of the payload
 
-<< FINISH THIS: Include system overview diagram >>
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=0.75\textwidth]{figures/sys_overview.png}
+		\caption{An overview of the payload's electronics configuration.}
+		\label{fig:sys_overview}
+	\end{center}
+\end{figure}
 % Talk about the hardware (PSU, RPi, etc.)
 \subsection{Hardware and Electronics}
 \subsubsection{Power Supply}
+
 The SORA 3 payload used a WinSystems PPM-DC-ATX-P power supply unit (PSU).
 This unit has several properties that are very attractive for applications such as this. 
 To power the flight computer and hardware we received the \SI{30}{\volt} DC supply from HASP which we fed to our PSU that supplied our flight computer and sensor electronics with \SI{+5}{\volt}, and our current-to-voltage operational amplifiers with \SI{+12}{\volt} and \SI{-12}{\volt}.
