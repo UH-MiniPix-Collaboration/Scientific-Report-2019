@@ -1,8 +1,12 @@
 \section{Discussion}
 \label{sec:Discussion}
 
-This is the discussion.
+By the terms of success defined at the beginning of the mission, the SORA 3 payload did not succeed in its goals.
+The payload faced difficulties in each of its subexperiments for varying reasons, however, each experiment did have varying ranges of success, which will be discussed in the subsequent sections.
+Despite the failures, the payload was designed and constructed well, and only minor improvements to certain aspects of the payload would be necessary to fix the payload as a whole.
+%The materials and devices used for the radiation measurements, astrobiology experiment, and solar cell fabrication were high quality.
 
+\subsection{Electronics Discussion}
 We opted to use a current to voltage converter, also known as a transimpedance amplifier, in order to collect data necessary to characterize the organic solar cells.
 This was used primarily because it is a relatively simple circuit which was already known of that would not add any additional resistance in the solar cell's current path, thus not reducing the current through the cell.
 The preferred method would be to utilize a proper current shunt monitor integrated circuit (IC) in a high-side sensing arrangement.
@@ -10,8 +14,8 @@ This would allow for more responsiveness to measuring current flowing through th
 The method of a shunt monitor works by measuring the current through a shunt resistor.
 Since the shunt monitor is comprised of a match differential amplifier with high input impedance the shunt resistance seen by the solar cell would be practically zero and would also not alter the current flowing through the cell.
 
-To collect readings of the voltages produced from the solar cell currents we opted to use the Arduino MEGA analogRead() capability which is able to read voltages up to 5V.
-It is not recommended to read negative voltages but since we were reading voltages of very small currents the Arduino was not in danger of being destroyed.
-The issue with using an Arduino is that it has an analog to digital converter (ADC) resolution of 10 bits at a maximum voltage reading of 5v which equates to an error of +/-4.89mV.
-There is the Arduino Due which is capable of 12bit ADC resolution which would equate to an error of +/-1.22mV and would give a 25\% greater precision of data collection.
-There are 16bit ADC's available as packaged IC's but they cane become cost prohibitive especially when collecting data from a large array of solar cells.
+To collect readings of the voltages produced from the solar cell currents we opted to use the Arduino MEGA \texttt{analogRead()} capability which is able to read voltages up to \SI{5}{\volt}.
+It is not recommended to read negative voltages, but since we were reading voltages of very small currents the Arduino was not in danger of being damaged.
+The issue with using an Arduino MEGA is that it has an analog to digital converter (ADC) resolution of 10 bits at a maximum voltage reading of \SI{5}{\volt} which equates to an error of $\pm$\SI{4.89}{\milli\volt}.
+There is the Arduino Due which is capable of 12-bit ADC resolution which would equate to an error of $\pm$\SI{1.22}{\milli\volt} and would give a 25\% greater precision of data collection.
+There are 16-bit ADC's available as packaged IC's but they can be cost prohibitive especially when collecting data from a large array of solar cells.

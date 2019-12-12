@@ -2,5 +2,5 @@
 *.aux
 *.bib
 *.out
-*.pdf
 *.toc
+report.pdf
