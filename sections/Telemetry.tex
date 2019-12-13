@@ -35,8 +35,10 @@ The structure of the data packets was as follows:
 
 \noindent\textit{packet-num, rpi-temp, timepix1-temp, timepix1-dose, timepix1-counts, timepix2-temp, timepix2-dose, timepix2-counts, ambient-pressure, iss-pressure, iss-temp, cell1-temp, cell2-temp, cell3-temp, cell4-temp, cell5-temp, cell6-temp, cell7-temp, cell8-temp, photodiode1, photodiode2, photodiode3, photodiode4, timestamp}.
 
+
 Listing \ref{list:Downlink} shows an example of some downlink packets received during flight.
-\begin{lstlisting}[caption = Sample of downlinked data packets. The line breaks within each packet was not present in the actual data and are shown here to clearly show the packet., label={list:Downlink}]
+\begin{small}
+  \begin{lstlisting}[caption = Sample of downlinked data packets. The line breaks within each packet was not present in the actual data and are shown here to clearly show the packet., label={list:Downlink}]
   ...
   1290,34.3,57.6,0.0,0,57.6,0.0,0,-6.20,0.00,0.00,-2.89,16.32,16.09,27.17,
   27.80,25.44,-1.81,-0.40,691.00,1023.00,1023.00,78.00,2019-09-05-13:50:18
@@ -50,4 +52,5 @@ Listing \ref{list:Downlink} shows an example of some downlink packets received d
   1293,34.9,57.6,0.5517,4,57.6,0.0086,1,-6.40,0.00,0.00,-2.92,16.17,16.19,
   27.24,27.91,25.55,-1.81,-0.42,712.00,1023.00,1023.00,78.00,2019-09-05-13:50:22
   ...
-\end{lstlisting}
+  \end{lstlisting}
+\end{small}

@@ -2,7 +2,8 @@
 \label{sec:Cosmic-Radiation-Results}
 
 The FITPix recorded a total of 15810 frames, and the MiniPIX recorded a total of 15735 frames.
-As can be seen by comparing Figures \ref{subfig:minipix-counts} and \ref{subfig:fitpix-counts}, the MiniPIX and FITPix recorded a similar number of counts throughout the duration of flight.
+As can be seen by comparing Figures \ref{subfig:minipix-counts} and \ref{subfig:fitpix-counts}, the MiniPIX and FITPix recorded a similar number of counts throughout the duration of flight despite the differing energy thresholds for the devices.
+This 
 Their dose measurements are slightly different in value due to the difference in energy threshold between the two detectors, but the plots follow the same trend.
 These results are also comparable to the data recorded during the 2018 SORA flight, which can be seen in Figure \ref{fig:2018-minipix-data}.
 
@@ -28,30 +29,43 @@ These results are also comparable to the data recorded during the 2018 SORA flig
 
 \begin{figure}[h!]
 	\begin{center}
-	\includegraphics[width=0.95\textwidth]{figures/counts_per_second_2018.pdf}
+	\includegraphics[width=0.85\textwidth]{figures/counts_per_second_2018.pdf}
 	\caption{Counts from the 2018 SORA mission.}
 	\label{fig:2018-minipix-data}
 	\end{center}
 \end{figure}
 
 \begin{figure}[h!]
-\subfigure[Histogram of the LET from each cluster type collected by the MiniPIX during flight.]{\includegraphics[width=12cm]{figures/mp_track_let_histogram.pdf}}
+\subfigure[Histogram of the LET from each cluster type collected by the MiniPIX during flight with bins of size 150.]{\includegraphics[width=8cm]{figures/mp_track_let_histogram.pdf}}
 \hfill
-\subfigure[Density plot of the LET from each cluster type collected by the MiniPIX during flight.]{\includegraphics[width=12cm]{figures/mp_track_let_density.pdf}}
+\subfigure[Density plot of the LET from each cluster type collected by the MiniPIX during flight.]{\includegraphics[width=8cm]{figures/mp_track_let_density.pdf}}
 \hfill
 \caption{MiniPIX LET distributions from flight data.}
 \label{fig:minipix-let}
 \end{figure}
 
 \begin{figure}[h!]
-\subfigure[Histogram of the LET from each cluster type collected by the FITPix during flight.A logarithmic scale was used for the y-axis due to the small blob counts being relatively larger than all other counts.]{\includegraphics[width=12cm]{figures/fp_track_let_histogram.pdf}}
+\subfigure[Histogram of the LET from each cluster type collected by the FITPix during flight  with bins of size 150. A logarithmic scale was used for the y-axis due to the small blob counts being relatively larger than all other counts.]{\includegraphics[width=8cm]{figures/fp_track_let_histogram.pdf}}
 \hfill
-\subfigure[Density plot of the LET from each cluster type collected by the FITPix during flight.]{\includegraphics[width=12cm]{figures/fp_track_let_density.pdf}}
+\subfigure[Density plot of the LET from each cluster type collected by the FITPix during flight.]{\includegraphics[width=8cm]{figures/fp_track_let_density.pdf}}
 \hfill
 \caption{FITPix LET distributions from flight data.}
 \label{fig:fitpix-let}
 \end{figure}
 
+\begin{figure}[h!]
+	\begin{center}
+	\includegraphics[width=0.5\textwidth]{figures/LETSpectraPerCluster2018.pdf}
+	\caption{Histogram of the LET spectrum for the 2018 mission.}
+	\label{fig:2018-minipix-let}
+	\end{center}
+\end{figure}
+
+
+The MiniPIX LET histogram possesses a remarkably similar shape to the LET histogram of the 2018 mission data, which can be seen in Figure \ref{fig:2018-minipix-let}.
+The primary difference between the two data sets is the total counts, which is understandable considering the 2018 mission had a longer duration than the 2019 mission.
+
+The density plots for both the MiniPIX and the FITPix clearly show that the majority of LET values lie within the \SIrange{100}{1000}{\kilo\eV\per\micro\meter} range.
 
 
 \begin{figure}[h!]
