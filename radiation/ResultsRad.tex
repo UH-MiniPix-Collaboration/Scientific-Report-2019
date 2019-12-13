@@ -2,10 +2,10 @@
 \label{sec:Cosmic-Radiation-Results}
 
 The FITPix recorded a total of 15810 frames, and the MiniPIX recorded a total of 15735 frames.
-As can be seen by comparing Figures \ref{subfig:minipix-counts} and \ref{subfig:fitpix-counts}, the MiniPIX and FITPix recorded a similar number of counts throughout the duration of flight despite the differing energy thresholds for the devices.
-This 
-Their dose measurements are slightly different in value due to the difference in energy threshold between the two detectors, but the plots follow the same trend.
-These results are also comparable to the data recorded during the 2018 SORA flight, which can be seen in Figure \ref{fig:2018-minipix-data}.
+Upon integration in the Fort Sumner hangar, the environmental used in the ISS module ceased to function.
+Prior to leaving the UH campus, the sensor was functioning and sending data to the Arduino MEGA.
+It is suspected that the sensor may have disconnected during transit from the UH campus to Fort Sumner.
+Due to this, the environment inside the ISS module was unknown during flight.
 
 \begin{figure}[h!]
 \hfill
@@ -23,17 +23,19 @@ These results are also comparable to the data recorded during the 2018 SORA flig
 \hfill
 \subfigure[FITPix dose measure during flight.]{\label{subfig:fitpix-dose}\includegraphics[width=8cm]{figures/fp_dose.pdf}}
 \hfill
-\caption{MiniPIX particle data detected during flight.}
+\caption{FITPix particle data detected during flight.}
 \label{fig:fitpix-data}
 \end{figure}
 
 \begin{figure}[h!]
-	\begin{center}
-	\includegraphics[width=0.85\textwidth]{figures/counts_per_second_2018.pdf}
-	\caption{Counts from the 2018 SORA mission.}
-	\label{fig:2018-minipix-data}
-	\end{center}
+\subfigure[FITPix counts measured during flight.]{\label{subfig:fitpix-counts}\includegraphics[width=12cm]{figures/counts_per_second_2018.pdf}}
+\hfill
+\subfigure[FITPix dose measure during flight.]{\label{subfig:fitpix-dose}\includegraphics[width=12cm]{figures/2018dose.pdf}}
+\hfill
+\caption{MiniPIX particle data detected during flight.}
+\label{fig:fitpix-data}
 \end{figure}
+
 
 \begin{figure}[h!]
 \subfigure[Histogram of the LET from each cluster type collected by the MiniPIX during flight with bins of size 150.]{\includegraphics[width=8cm]{figures/mp_track_let_histogram.pdf}}
@@ -55,18 +57,11 @@ These results are also comparable to the data recorded during the 2018 SORA flig
 
 \begin{figure}[h!]
 	\begin{center}
-	\includegraphics[width=0.5\textwidth]{figures/LETSpectraPerCluster2018.pdf}
+	\includegraphics[width=0.6\textwidth]{figures/LETSpectraPerCluster2018.pdf}
 	\caption{Histogram of the LET spectrum for the 2018 mission.}
 	\label{fig:2018-minipix-let}
 	\end{center}
 \end{figure}
-
-
-The MiniPIX LET histogram possesses a remarkably similar shape to the LET histogram of the 2018 mission data, which can be seen in Figure \ref{fig:2018-minipix-let}.
-The primary difference between the two data sets is the total counts, which is understandable considering the 2018 mission had a longer duration than the 2019 mission.
-
-The density plots for both the MiniPIX and the FITPix clearly show that the majority of LET values lie within the \SIrange{100}{1000}{\kilo\eV\per\micro\meter} range.
-
 
 \begin{figure}[h!]
 \subfigure[Data from photodiode 0.]{\includegraphics[width=8cm]{figures/photo_0.pdf}}
