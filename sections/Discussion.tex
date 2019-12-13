@@ -23,14 +23,15 @@ The method of a shunt monitor works by measuring the current through a shunt res
 Since the shunt monitor is comprised of a match differential amplifier with high input impedance the shunt resistance seen by the solar cell would be practically zero and would also not alter the current flowing through the cell.
 
 To collect readings of the voltages produced from the solar cell currents we opted to use the Arduino MEGA \texttt{analogRead()} capability which is able to read voltages up to \SI{5}{\volt}.
-It is not recommended to read negative voltages, but since we were reading voltages of very small currents the Arduino was not in danger of being damaged.
+It is not recommended to read negative voltages, but since we were reading voltages with very small currents the Arduino was not in danger of being damaged.
 The issue with using an Arduino MEGA is that it has an analog to digital converter (ADC) resolution of 10 bits at a maximum voltage reading of \SI{5}{\volt} which equates to an error of $\pm$\SI{4.89}{\milli\volt}.
 There is the Arduino Due which is capable of 12-bit ADC resolution which would equate to an error of $\pm$\SI{1.22}{\milli\volt} and would give a 25\% greater precision of data collection.
 There are 16-bit ADC's available as packaged IC's but they can be cost prohibitive especially when collecting data from a large array of solar cells.
-
-The biggest downfall of our constructed circuit is that there is a wide range of voltage values surrounding $V_{oc}$ at which the circuit measures zero current.
-The current at those values is on the order of nanoamperes, which is well below the resolution of our circuit.
 One improvement that could be made in addition to choosing a higher bit microcontroller or IC is the use of a digipot with a higher step count.
 The digipot used in the SORA 3 payload had 128 steps since a higher step digipot would be useless with our 10-bit Arduino MEGA.
 Some digipots can have as many as 1024 steps, which would allow a voltage sweep from \SIrange{0}{0.8}{\volt} with a resolution of \SI{0.78}{\milli\volt}.
 This resolution would be as high as the equipment used to test the solar cells in the lab.
+
+The biggest downfall of our constructed circuit is that there is a wide range of voltage values surrounding $V_{oc}$ at which the circuit measures zero current.
+The current at those values is on the order of nanoamperes, which is well below the resolution of our circuit.
+Simultaneously being bale to read current on the order of nanoamps as well as microamps would prove to be quite a technical challenge, but such an endeavor would certainly be worthwhile for future experiments.

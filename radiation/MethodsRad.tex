@@ -8,12 +8,12 @@ The Timepix sensors output data in a human-readable, array-like format that dire
 The sensor collects data in a manner similar to that of an optical camera.
 A shutter time is a parameter defined by the user, and the sensor will collect data for the entire duration of the shutter time.
 Once the time has lapsed, the sensor packages the data into a data frame and is sent to the storage of the computer.
-The length of the shutter time must be carefully chosen, and the time for the SORA 3 mission was approximately 1 second for both devices.
-Too short of a length will result in many empty data frames that waste storage space, but too long of a length will result in data frames which are unreadable since the particle tracks in the frame will be indistinguishable from one another.
+The length of the shutter time must be carefully chosen, and the time for the SORA 3 mission was approximately one second for both devices.
+Too short of a length will result in many empty data frames that wastes storage space, but too long of a length will result in data frames which are unreadable since the particle tracks in the frame will intersect and be indistinguishable from one another.
 Each pixel in the 256 by 256 sensor array has one corresponding energy value per frame, so this array can be used to reconstruct the data frame.
 The energy threshold is another user-defined parameter that determines the minimum energy which can be detected by the sensor.
 The primary purpose of the energy threshold is to filter out extraneous whitenoise from the environment.
-An example of a data frame can be seen in Figure \ref{fig:minipix-example-frame}
+An example of a data frame can be seen in Figure \ref{fig:minipix-example-frame}.
 A separate file contains the metadata for each data frame, and contained within the metadata is information such as the energy threshold and the timestamp.
 
 \begin{figure}[h!]
@@ -57,7 +57,7 @@ A visual example of the bounding box and the linear least square fit line can be
 		\label{fig:stuart-track-example}
 	\end{center}
 \end{figure}
-$L$ can now be calculated using $L_p$ and $T$, the thickness of the sensor with
+$L$ can now be calculated using $L_p$ and $T$, the thickness of the sensor, with
 \begin{equation*}
   L = \sqrt{L_p^2 + T^2}.
 \end{equation*}
@@ -70,7 +70,7 @@ The actual identity of the incident particle cannot be directly measured by the 
 Figure \ref{fig:stuart-track-types} shows the classifications used in the SORA experiments.
 \begin{figure}[h!]
 	\begin{center}
-		\includegraphics[width=\textwidth]{figures/stuart-track-types.pdf}
+		\includegraphics[width=0.8\textwidth]{figures/stuart-track-types.pdf}
 		\caption{A visual from Ref. \cite{Stuart-Thesis} showing the categories of tracks. This classification system is the same that is used in the SORA experiments.}
 		\label{fig:stuart-track-types}
 	\end{center}
@@ -82,9 +82,9 @@ Figure \ref{fig:stuart-track-types} shows the classifications used in the SORA e
 
 \subsubsection{Fabrication}
 
-We began by developing the fabrication procedure for each layer in the stack. To achieve thin films from liquid solutions we use spin coating is for the EBL, ETL, and active layer. The liquid solution is deposited onto the surface of a substrate that is spun at a high RPM, flinging the solution out to the edges through centripetal forces and resulting a thin, ideally uniform, layer. After spinning the substrate is moved into the a hot plate where any remaining solvent is evaporated and a solid thin film remains. The top electrode is deposited by means of sputter coating. FTO slides, 0.5-1\% PEDOT:PSS in H$_2$O solution, and Pt sources were all used as purchased from suppliers without further modification. \\
+We began by developing the fabrication procedure for each layer in the stack. To achieve thin films from liquid solutions we use spin coating is for the EBL, ETL, and active layer. The liquid solution is deposited onto the surface of a substrate that is spun at a high RPM, flinging the solution out to the edges through centripetal forces and resulting a thin, ideally uniform, layer. After spinning the substrate is moved into the a hot plate where any remaining solvent is evaporated and a solid thin film remains. The top electrode is deposited by means of sputter coating. FTO slides, 0.5-1\% PEDOT:PSS in H$_2$O solution, and platinum sources were all used as purchased from suppliers without further modification. \\
 	
-	The EBL titania layer was synthesized through a sol gel process resulting in an amorphous phase, which when applied during spin coating and further annealed creates a dense noncrystalline layer. The sol gel titania solution was provided by Lily Schafer and prepared prior to our arrival at the lab. titania was held in the fridge when not in use.\\
+	The EBL titania layer was synthesized through a sol gel process resulting in an amorphous phase, which when applied during spin coating and further annealed creates a dense noncrystalline layer. The sol gel titania solution was provided by Lily Schafer and prepared prior to our arrival at the lab. Titania was held in the fridge when not in use.\\
 	
 	The active layer was prepared in a 1:1 ratio between P3HT and PCBM as suggested by literature and previous undergraduate UH lab procedures for "Excitonic photovoltaics". \SI{12.5}{\milli\gram} of PH3T was diluted in \SI{0.5}{\milli\liter} of chlorobenzene (CB) and \SI{12.5}{\milli\gram} of PCBM was also diluted in \SI{0.5}{\milli\liter} of CB. Both solutions were ultra sonicated before being combined into one solution and further sonicated to ensure an even mixing of P3HT and PCBM. We attempted to use a small magnetic stir bar to aggitate and mix the solution but this proved ineffective due to the small size of the stir bar and the height of the vessel containing our solution. Any active layer solution not immediately used is held in the desiccator. \\
 	
@@ -92,6 +92,6 @@ We began by developing the fabrication procedure for each layer in the stack. To
 	
 	FTO slides are first cleaned with a chemical soap scrub and then with a deionized water, isoproponal, and acetone ultrasonic bath\textbf{<<FINISH THIS [model?] >>} successively before being dried under nitrogen and heated in the oven at \SI{150}{\celsius} for an hour. Clean slides were then taken to the spin coater for application of the titania EBL. The entire slide is loaded onto the spin coater and [<< FINISH THIS: how many? >>] mL were deposited from the autopipette before spinning at [RPM? seconds?] to achieve a uniform hazy film. The quality and thickness of  film was based on appearances as we did not have access to a profilometer. Immediately Following the film application a chemwipe or razorblade was used to remove a portion of the film from one side and expose the FTO. Each slide was then taken to the oven to anneal at \SI{550}{\celsius} for 5 hours, then cool back to room temperature over 12 hours. \\
 	
-	After annealing the slides were taken back to the spin coater. \SI{75}{\micro\liter} of active solution was deposited at 100 RPM for 5 second before ramping up to 1000 RPM for 25 seconds. Each slide was set on a hot plate at \SI{150}{\celsius} for 10 minutes before returning to the spin coater. \SI{200}{\micro\liter} PEDOT:PSS was deposited by drop casting before spin coating at 500 RPM for 5 seconds then ramped up to 5000 RPM for 25 seconds. Slides were then returned to the hot plate for 10 minutes. Each slide was then covered by a mask and set into the Leica EM SDC050 sputter coater that was loaded with a platinum source before being brought to a vacuum level ($<$\SI{10e-2}{\milli\bar}). The high voltage was then turned on and allowed to sputter for 150 seconds. \\
+	After annealing the slides were taken back to the spin coater. \SI{75}{\micro\liter} of active solution was deposited at 100 RPM for 5 seconds before ramping up to 1000 RPM for 25 seconds. Each slide was set on a hot plate at \SI{150}{\celsius} for 10 minutes before returning to the spin coater. \SI{200}{\micro\liter} PEDOT:PSS was deposited by drop casting before spin coating at 500 RPM for 5 seconds then ramped up to 5000 RPM for 25 seconds. Slides were then returned to the hot plate for 10 minutes. Each slide was then covered by a mask and set into the Leica EM SDC050 sputter coater that was loaded with a platinum source before being brought to a vacuum level ($<$\SI{10e-2}{\milli\bar}). The high voltage was then turned on and allowed to sputter for 150 seconds. \\
 	
-	Cells were analyze in the lab using CH instrument 600E model potentiostat along with 
+	Cells were analyzed in the lab using CH instrument 600E model potentiostat along with 

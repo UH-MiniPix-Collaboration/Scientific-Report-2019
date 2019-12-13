@@ -6,10 +6,10 @@ As can be seen by comparing Figures \ref{subfig:minipix-counts} and \ref{subfig:
 Both the trend and values of the 2019 counts almost exactly match that of the 2018 SORA mission, which is shown in Figure \ref{subfig:2018-minipix-counts}.
 The MiniPIX and FITPix dose measurements are slightly different in value due to the difference in energy threshold between the two detectors, but the plots follow the same trend.
 Interestingly, the 2019 MiniPIX data has a small but noticeably higher average dose than the 2018 MiniPIX data.
-The average dose rate for the 2019 data is \SI{0.578}{\micro\gray\per\second} while the average rate over the same period of time for the 2018 MiniPIX data is \SI{0.499}{\micro\gray\per\second}.
+The average dose rate for the 2019 data is \SI{0.578}{\micro\gray\per\second} while the average dose rate over the same period of time for the 2018 MiniPIX data is \SI{0.499}{\micro\gray\per\second}.
 There is a 15.8\% increase from 2018 to 2019.
 While this is not a substantial increase, this increase can likely be attributed to the change in the device's environment.
-Further investigation is certainly needed in order to make a definitive claim.
+Further investigation through future experiments is certainly needed in order to make a definitive claim.
 
 The MiniPIX LET histogram possesses a remarkably similar shape to the LET histogram of the 2018 mission data, which can be seen in Figure \ref{fig:2018-minipix-let}.
 The primary difference between the two data sets is the total counts, which is understandable considering the 2018 mission had a longer duration than the 2019 mission.
@@ -20,7 +20,7 @@ As previously mentioned, developing an accurate and low-cost radiation dosimeter
 While computational models are a powerful tool, they are currently not well-suited for monitoring the well being of astronauts and their exposure to radiation.
 Schwadron et. al. \cite{Schwadron-Update} from the CRaTER experiment found that the observed dose rates in the interplanetary environment exceed computational predictions by about 10\%.
 
-Understanding and monitoring thermal neutrons is important to the safety of astronauts and airline passengers.
+Understanding and monitoring thermal neutrons is important for the safety of astronauts and airline passengers.
 This idea was mentioned in the 2018 SORA mission report, which attempted to monitor neutrons with the use of a scintillator.
 The scintillator used in that experiment did not yield any results, so further investigations into determining an effective scintillating material to use with a Timepix device is worthwhile.
 Furthermore, monitoring the solar cycle with a Timpix dosimeter would be an interesting application and a good testbed of such a device.
@@ -40,4 +40,4 @@ The circuit itself was properly designed to account for the 24 cells that were o
 As a result of both the cell fabrication difficulties and the circuit incompatibility, the number of cells was reduced.
 The current reading circuit was connected directly to the Arudino MEGA since the multiplexers needed to be removed.
 Three cells were used for flight since the Arduino MEGA could only accommodate six direct connections to its analog pins (two connections per cell).
-The reason for this incompatibility is still unknown.
+The reason for this incompatibility is still unknown, but it likely has to do with the internals of the chips.
