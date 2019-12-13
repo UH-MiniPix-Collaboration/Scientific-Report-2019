@@ -8,12 +8,11 @@ The Timepix sensors output data in a human-readable, array-like format that dire
 The sensor collects data in a manner similar to that of an optical camera.
 A shutter time is a parameter defined by the user, and the sensor will collect data for the entire duration of the shutter time.
 Once the time has lapsed, the sensor packages the data into a data frame and is sent to the storage of the computer.
-The length of the shutter time must be carefully chosen.
+The length of the shutter time must be carefully chosen, and the time for the SORA 3 mission was approximately 1 second for both devices.
 Too short of a length will result in many empty data frames that waste storage space, but too long of a length will result in data frames which are unreadable since the particle tracks in the frame will be indistinguishable from one another.
 Each pixel in the 256 by 256 sensor array has one corresponding energy value per frame, so this array can be used to reconstruct the data frame.
 The energy threshold is another user-defined parameter that determines the minimum energy which can be detected by the sensor.
 The primary purpose of the energy threshold is to filter out extraneous whitenoise from the environment.
-<< FINISH THIS: Add the energy threshold and the shutter time used for the devices in the mission >>
 An example of a data frame can be seen in Figure \ref{fig:minipix-example-frame}
 A separate file contains the metadata for each data frame, and contained within the metadata is information such as the energy threshold and the timestamp.
 
